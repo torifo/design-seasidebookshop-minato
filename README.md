@@ -42,6 +42,21 @@ open index.html
 python3 -m http.server 8080
 ```
 
+## Install as a skill / スキルとして導入
+
+This repo ships a cross-agent **`SKILL.md`** (open standard) usable by both Claude Code and Codex CLI as a design-reference skill. Link the repo into the agent's skills directory:
+
+このリポジトリは Claude Code / Codex CLI 共通の **`SKILL.md`**（オープン標準）を同梱し、デザイン参照スキルとして使えます。
+
+```bash
+# Claude Code
+ln -s "$(pwd)" ~/.claude/skills/design-seasidebookshop-minato
+# Codex CLI
+ln -s "$(pwd)" ~/.codex/skills/design-seasidebookshop-minato
+```
+
+Restart the agent; it is matched automatically by the skill's `description` (skill name: `design-seasidebookshop-minato`). / エージェント再起動後、`description` に基づき自動マッチします。
+
 ## Series
 
 このサイトは **seaside bookshop design research series** の一作です。
